@@ -1,0 +1,28 @@
+$(document).on("pageshow","#main",function(){
+    var htmlTemplate="<li>"+
+    			"<div class='ui-block-a itemGrid' style='background-color: $color'>"+
+                      "<a href=''><img  src='$icon' alt=''></a>"+
+                      "<h6>$name</h6>"+
+                    "</div>";
+              "</li>";
+
+    var lista = $("#lista");
+    var dataTemplate = [{field: "color"}, {field: "icon"},{field: "name"}]
+    lista.empty();
+    var callback = function(data){
+      return ux_service.createHTMLComponents(htmlTemplate, dataTemplate, lista, data);
+    }
+
+    // db_service.get("/committee", callback);
+});
+// var panelPage= '<div data-role="page" id="main" data-hash="false">       <div data-role="header">          <div class="logoUEB">            <img src="iconos/UEBlogo_rectangular.png" width="105" height="32" border="0">          </div>          <h1></h1>          <a href="#publicaciones_historicas" data-panel="main" data-role="button" data-icon="home" data-theme="c" class="ui-btn-right ui-icon-home" data-iconpos="notext">inicio</a>        </div><!-- /header -->        <div data-role="content">  <!-- <div data-role="main" style="background-color: #f2f2f2;" class="ui-content"> -->    <div class="titulo">            <h1>Comit&eacute;s Facultad de Ingenier&iacute;a</h1>    </div>    <ul id="listaCommites" data-role="listview" data-inset="true">          <li>        <a style="background-color:#FF7D1F;" href="#">          <div class="botonMenu" >            <div class="punto"><img src="iconos/icon_rsu_circle.png" width="26" height="26" border="0"></div>            <div class="nombre">Responsabilidad Social</div>          </div>        </a>      </li>      <li>        <a style="background-color:#4C6BA2;" href="#">          <div class="botonMenu" >            <div class="punto"><img src="iconos/icon_egresados_circle.png" width="26" height="26" border="0"></div>            <div class="nombre">Egresados</div>          </div>        </a>      </li>      <li>        <a style="background-color:#E52B33;" href="#">          <div class="botonMenu" >            <div class="punto"><img src="iconos/icon_calidad_circle.png" width="26" height="26" border="0"></div>            <div class="nombre">Calidad</div>          </div>        </a>      </li>      <li>        <a style="background-color:#20B07F;" href="#">          <div class="botonMenu" >            <div class="punto"><img src="iconos/icon_continuada_circle.png" width="26" height="26" border="0"></div>            <div class="nombre">Educaci&oacute;n Continuada</div>          </div>        </a>      </li>        <li>        <a style="background-color:#F15A4B;" href="#">          <div class="botonMenu" >            <div class="punto"><img src="iconos/icon_curricular_circle.png" width="26" height="26" border="0"></div>            <div class="nombre">Curricular</div>          </div>        </a>      </li>      <li>        <a style="background-color:#AECC60;" href="#comiteComunicaciones" data-panel="main">          <div class="botonMenu" >            <div class="punto"><img src="iconos/icon_comunicaciones_circle.png" width="26" height="26" border="0"></div>            <div class="nombre">Comunicaciones</div>          </div>        </a>      </li>      <li>        <a style="background-color:#C12E86;" href="#">          <div class="botonMenu" >            <div class="punto"><img src="iconos/icon_investigacion_circle.png" width="26" height="26" border="0"></div>            <div class="nombre">Investigaciones</div>          </div>        </a>      </li>      <li>        <a style="background-color:#619543;" href="#">          <div class="botonMenu" >            <div class="punto"><img src="iconos/icon_externo_circle.png" width="26" height="26" border="0"></div>            <div class="nombre">Externo</div>          </div>        </a>      </li>      <li>        <a style="background-color:#662D91;" href="#">          <div class="botonMenu" >            <div class="punto"><img src="iconos/icon_exito_circle.png" width="26" height="26" border="0"></div>            <div class="nombre">&Eacute;xito Estudiantil</div>          </div>        </a>      </li>      <li>        <a style="background-color:#42BDED;" href="#">          <div class="botonMenu" >            <div class="punto"><img src="iconos/icon_internacionalizacion_circle.png" width="26" height="26" border="0"></div>            <div class="nombre">Internacionalizaci&oacute;n</div>          </div>        </a>      </li>      <li>        <a style="background-color:#F9B924;" href="#">          <div class="botonMenu" >            <div class="punto"><img src="iconos/icon_tic_circle.png" width="26" height="26" border="0"></div>            <div class="nombre">TIC</div>          </div>        </a>      </li>    </ul>  <!-- </div> -->        </div><!-- /content -->'
+// var panel = '<div data-role="panel" id="mypanel" data-position="left" data-hash="crumbs" data-context="b#default" data-swipe-close="false" data-dismissible="false">'+panelPage+' </div'
+// $(document).one('pagebeforecreate', function () {
+//     $.mobile.pageContainer.prepend(panel);
+//     $("#mypanel").panel().enhanceWithin();
+// $( "#mypanel" ).panel( "open");
+//     $("[data-role='header']").append('<a href="#mypanel" class="ui-btn ui-btn-left ui-btn-icon-notext ui-icon-grid ui-corner-all"></a>')
+// });
+// $(document).on('pagebeforeshow', function(){       
+//     $( "#mypanel" ).panel( "open");
+// });

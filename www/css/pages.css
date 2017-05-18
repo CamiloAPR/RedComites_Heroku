@@ -1,0 +1,135 @@
+#listaMenu{
+	margin-top: 0;
+}
+.logoUEB{
+	margin-left: 35px;
+	padding-top: 2px;
+	float: left;
+	width: 105px;
+	height: 30px;
+}
+#avatarLateral{
+	background: rgba(255, 255, 255, 0.68);
+	height:150px;
+	border-radius: 10px;
+	margin-bottom:-14px
+}
+.panelGrid {
+	background-color: rgba(255, 255, 255, 0.45);
+	padding: 5px;
+}
+.itemGrid {
+	text-align: center;
+	text-shadow: none;
+	margin-top: 5px;
+	padding-left: 3px;
+	padding-right: 3px;
+	font-weight: bold;
+}
+.ui-content{
+	background-color: #0d7984;
+}
+
+h6 {
+	font-size: 2vmin;
+	text-shadow: none;
+}
+.public-destacado {
+	float: left;
+	border-radius: 8px;
+	background-color: #FFFFFF;
+	width: 300px;
+	height: 140px;
+	margin-left: 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.public-encabezado {
+	float: left;
+	border-radius: 8px 8px 0px 0px;
+	background-color: #FFAA00;
+	padding-left: 15px;
+	width: 285px;
+	height: 35px;
+}
+.public-titulo {
+	float: left;
+	text-align:left;
+	text-shadow: none;
+	margin-top: 10px;
+	color: #FFF;
+	width: 150px;
+	height: 20px;
+}
+.public-iconos {	
+	float: left;
+	margin-top: 4px;
+	margin-left: 63px;
+	width: 60px;
+	height: 27px;
+}
+.public-resumen {
+	float: left;
+	margin-top: 12px;
+	margin-left: 15px;
+	width: 180px;
+	height: 75px;
+	font-size: 14px;
+}
+.public-imagen {
+	float: left;
+	margin-top: 12px;
+	margin-left: 30px;
+	width: 60px;
+	height: 60px;
+	border-style: solid;
+	border-color: green;
+	border-width: 1px;
+}
+.public-comite {
+	font-size: 10px;
+	text-align: right;
+	text-shadow: none;
+	float: left;
+	color: #FFAA00;
+	padding-right: 12px;
+	margin-top: 1px;
+	width: 285px;
+	height: 20px;
+	font-style: italic;
+}
+p#nuevo{
+	font-size: 1.5em;
+		border-bottom: 1px solid #9C9E9E;
+		margin-bottom: 20px;
+}
+
+p#nuevo-continuacion{
+	font-size: 1.5em;
+		border-bottom: 3px solid #9C9E9E;
+		margin-bottom: 20px;
+		margin-top: 47px;
+}
+
+p#formulario{
+	font-size: 1em;
+	padding: 6px;
+	width: 70%;
+	margin-left: 15%;
+	border-bottom: 1px solid #E6E5E5;
+	border-top: 1px solid #E6E5E5;
+	margin-bottom: 10px;
+	text-align: left;
+}
+
+.miBoton{
+	width: 10%;
+}
+#pie{
+	padding-bottom: 10px;
+	height: 10px;
+	text-align: center;	
+	font-size: 12px;
+	font-weight: lighter;
+}
+

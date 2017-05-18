@@ -1,0 +1,23 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+
+img#logo {
+	width: 80%;
+	height: 80%;
+	margin-top: 5%;
+}
+
+img#small {
+	width: 35%;
+}
+
+input#busqueda {
+	font-size: 0.8em;
+}
+
+div#comites {
+	background-color: #A7EAB8;
+}
+

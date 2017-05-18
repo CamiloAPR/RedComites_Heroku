@@ -1,0 +1,41 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+  	<title>RedComites</title> 
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+  	<link rel="stylesheet" href="css/jquery.mobile-custom.css>" />
+    <link rel="stylesheet" href="css/pages.css?v=<?=time();?>">
+    <link rel="stylesheet" href="css/estilosIndex.css?v=<?=time();?>">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript" src="js/provider/db_service.js"></script>
+    <script type="text/javascript" src="js/provider/ux_service.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+  </head> 
+
+  <body> 
+<div data-role="tabs">
+    <ul data-role="listview" data-inset="true" class="tablist-left">
+      <li><a href="#one" data-ajax="false">one</a></li>
+      <li><a href="#two" data-ajax="false">two</a></li>
+      <li><a href="ajax-content.html" data-ajax="false">three</a></li>
+    </ul>
+    <div id="one" class="ui-body-d tablist-content">
+    <h1>First tab contents</h1>
+  </div>
+    <ul id="two" class="tablist-content" data-role="listview" data-inset="true">
+        <li><a href="#">Acura</a></li>
+        <li><a href="#">Audi</a></li>
+        <li><a href="#">BMW</a></li>
+        <li><a href="#">Cadillac</a></li>
+        <li><a href="#">Ferrari</a></li>
+    </ul>
+</div>
+    
+
+  </body>
+</html>

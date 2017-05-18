@@ -1,0 +1,115 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*.ui-field-contain {
+	width: 150px;
+	height: 30px;
+}*/
+#cabeza {
+	background-color: #145114;
+	text-shadow: none;
+	color: #FFF;
+}
+#pie {
+	background-color: #145114;
+	text-shadow: none;
+	color: #FFF;
+}
+.destacado {
+	float: left;
+	border-radius: 8px;
+	background-color: #FFFFFF;
+	width: 300px;
+	height: 140px;
+	margin-left: 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.encabezado {
+	float: left;
+	border-radius: 8px 8px 0px 0px;
+	background-color: #FFAA00;
+	padding-left: 15px;
+	width: 285px;
+	height: 35px;
+}
+.titulo {
+	float: left;
+	text-align:left;
+	text-shadow: none;
+	margin-top: 10px;
+	color: #FFF;
+	width: 150px;
+	height: 20px;
+}
+.iconos {	
+	float: left;
+	margin-top: 4px;
+	margin-left: 63px;
+	width: 60px;
+	height: 27px;
+}
+.fecha {
+	float: left;
+	margin-top: 12px;
+	margin-left: 22px;
+	width: 100px;
+	height: 27px;
+	font-size: 11px;
+	text-align: right;
+	text-shadow: none;
+	color: #FFF;
+	font-style: italic;
+}
+.resumen {
+	float: left;
+	margin-top: 12px;
+	margin-left: 15px;
+	width: 180px;
+	height: 75px;
+	font-size: 14px;
+}
+.imagen {
+	float: left;
+	margin-top: 12px;
+	margin-left: 30px;
+	width: 60px;
+	height: 60px;
+	border-style: solid;
+	border-color: green;
+	border-width: 1px;
+}
+.comite {
+	font-size: 10px;
+	text-align: right;
+	text-shadow: none;
+	float: left;
+	color: #FFAA00;
+	padding-right: 12px;
+	marging-top: 1px;
+	width: 285px;
+	height: 20px;
+	font-style: italic;
+}
+.baner {
+	font-size: 18px;
+	text-shadow: none;
+	float: left;
+	color: #FFF;
+	font-style: normal;
+	height: 40px;
+}
+.punto {
+	float: left;
+	margin-top: 4px;
+	height: 32px;
+}
+.nombre {
+	float: left;
+	margin-top: 8px;
+	margin-left: 8px;
+	height: 40px;
+}
+.ui-content{
+	background-color: #238E23;
+}

@@ -1,0 +1,98 @@
+.ui-content{
+	background-color: #0d7984;
+}
+.titulo{
+	text-align: center;
+	color: #FFF;
+	font-variant: small-caps;
+	font-size: 8px;
+	text-shadow: none;
+}
+.botonMenu {
+	font-size: 14px;
+	text-shadow: none;
+	float: left;
+	color: #FFF;
+	font-style: normal;
+	height: 34px;
+}
+.punto {
+	float: left;
+	margin-top: 4px;
+	height: 32px;
+}
+.nombre {
+	float: left;
+	margin-top: 8px;
+	margin-left: 8px;
+	height: 40px;
+}
+.public-fecha {
+	float: left;
+	margin-top: 12px;
+	margin-left: 22px;
+	width: 100px;
+	height: 27px;
+	font-size: 11px;
+	text-align: right;
+	text-shadow: none;
+	color: #FFF;
+	font-style: italic;
+}
+.banner{
+	margin-top: 10px;
+	margin-left: 20px;
+	margin-bottom: 10px;
+}
+.info {
+	float: left;
+	border-radius: 8px;
+	background-color: #FFFFFF;
+	width: 97%;
+	margin-left: 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.info-titulo {
+	height: 20px;
+	padding-top: 10px;
+	padding-left: 15px;
+	padding-bottom: 5px;
+	font-weight: bold;
+	border-bottom: solid;
+	border-bottom-width: thin;
+}
+.info-texto {
+	padding: 15px;
+	font-style: bold;
+}
+.comite-buscar {
+	height: 35px;
+	padding-left: 15px;
+	border-bottom: solid;
+	border-bottom-width: thin;
+}
+.comite-tags {
+	padding: 15px;
+	font-style: bold;
+}
+.comite-acercade {
+	font-weight: lighter;
+}
+.comite-icono {
+	padding-top: 5px;
+	margin-left: 95px;
+}
+.comite {
+	background-color: #AECC60;	
+}
+.tablist-left {
+    width: 25%;
+    display: inline-block;
+}
+.tablist-content {
+    width: 75%;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 5%;
+}
