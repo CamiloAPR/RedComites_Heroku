@@ -1,6 +1,6 @@
 // var host = "http://localhost:8000/"
-// var host = "https://redcomitesbackend.herokuapp.com/"
-var host = "http://192.168.0.26:8000/"
+var host = "https://redcomitesbackend.herokuapp.com/"
+// var host = "http://192.168.0.26:8000/"
 
 var db_service = {
 
