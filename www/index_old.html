@@ -1,0 +1,236 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+  	<title>RedComites</title> 
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+  	<link rel="stylesheet" href="css/jquery.mobile-custom.css?v=<?=time();?>" />
+  	<link rel="stylesheet" href="css/jquery.mobile.splitview.css?v=<?=time();?>" />
+    <link rel="stylesheet" href="css/jquery.mobile.grids.collapsible.css?v=<?=time();?>" />
+    <link rel="stylesheet" href="css/pages.css?v=<?=time();?>">
+    <link rel="stylesheet" href="css/estilosIndex.css?v=<?=time();?>">
+    <script type="text/javascript" src="js/jquery-1.7.1.js"></script>
+    <script type="text/javascript" src="js/jquery.mobile.splitview.js"></script>
+    <script type="text/javascript" src="js/jquery.mobile.js"></script>
+    <script type="text/javascript" src="js/iscroll-wrapper.js"></script>
+    <script type="text/javascript" src="js/iscroll.js"></script>
+    <script type="text/javascript" src="js/provider/db_service.js"></script>
+    <script type="text/javascript" src="js/provider/ux_service.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+  </head> 
+
+  <body> 
+    <div data-role="panel" data-id="menu" data-hash="crumbs" data-context="b#default">
+      <!-- MENÚ LATERAL -->
+      <div data-role="page" id="main" data-hash="false">
+      	<div data-role="header">
+          <div class="logoUEB">
+            <img src="iconos/UEBlogo_rectangular.png" width="105" height="32" border="0">
+          </div>
+          <h1></h1>
+          <a href="#publicaciones_historicas" data-transition="slideup" data-panel="main" data-role="button" data-icon="home" data-theme="c" class="ui-btn-right ui-icon-home" data-iconpos="notext">inicio</a>
+      	</div><!-- /header -->
+      	<div data-role="content">
+
+  <!-- <div data-role="main" style="background-color: #f2f2f2;" class="ui-content"> -->
+    <div class="titulo">
+            <h1>Comit&eacute;s Facultad de Ingenier&iacute;a</h1>
+    </div>
+    <ul id="listaCommites" data-role="listview" data-inset="true">    
+      <li>
+        <a style="background-color:#FF7D1F;" href="#">
+          <div class="botonMenu" >
+            <div class="punto"><img src="iconos/icon_rsu_circle.png" width="26" height="26" border="0"></div>
+            <div class="nombre">Responsabilidad Social</div>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a style="background-color:#4C6BA2;" href="#">
+          <div class="botonMenu" >
+            <div class="punto"><img src="iconos/icon_egresados_circle.png" width="26" height="26" border="0"></div>
+            <div class="nombre">Egresados</div>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a style="background-color:#E52B33;" href="#">
+          <div class="botonMenu" >
+            <div class="punto"><img src="iconos/icon_calidad_circle.png" width="26" height="26" border="0"></div>
+            <div class="nombre">Calidad</div>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a style="background-color:#20B07F;" href="#">
+          <div class="botonMenu" >
+            <div class="punto"><img src="iconos/icon_continuada_circle.png" width="26" height="26" border="0"></div>
+            <div class="nombre">Educaci&oacute;n Continuada</div>
+          </div>
+        </a>
+      </li>  
+      <li>
+        <a style="background-color:#F15A4B;" href="#">
+          <div class="botonMenu" >
+            <div class="punto"><img src="iconos/icon_curricular_circle.png" width="26" height="26" border="0"></div>
+            <div class="nombre">Curricular</div>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a style="background-color:#AECC60;" href="#comiteComunicaciones" data-panel="main">
+          <div class="botonMenu" >
+            <div class="punto"><img src="iconos/icon_comunicaciones_circle.png" width="26" height="26" border="0"></div>
+            <div class="nombre">Comunicaciones</div>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a style="background-color:#C12E86;" href="#">
+          <div class="botonMenu" >
+            <div class="punto"><img src="iconos/icon_investigacion_circle.png" width="26" height="26" border="0"></div>
+            <div class="nombre">Investigaciones</div>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a style="background-color:#619543;" href="#">
+          <div class="botonMenu" >
+            <div class="punto"><img src="iconos/icon_externo_circle.png" width="26" height="26" border="0"></div>
+            <div class="nombre">Externo</div>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a style="background-color:#662D91;" href="#">
+          <div class="botonMenu" >
+            <div class="punto"><img src="iconos/icon_exito_circle.png" width="26" height="26" border="0"></div>
+            <div class="nombre">&Eacute;xito Estudiantil</div>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a style="background-color:#42BDED;" href="#">
+          <div class="botonMenu" >
+            <div class="punto"><img src="iconos/icon_internacionalizacion_circle.png" width="26" height="26" border="0"></div>
+            <div class="nombre">Internacionalizaci&oacute;n</div>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a style="background-color:#F9B924;" href="#">
+          <div class="botonMenu" >
+            <div class="punto"><img src="iconos/icon_tic_circle.png" width="26" height="26" border="0"></div>
+            <div class="nombre">TIC</div>
+          </div>
+        </a>
+      </li>
+    </ul>
+  <!-- </div> -->
+      	</div><!-- /content -->
+
+      </div><!-- /page -->
+
+      <!-- MENÚ LATERAL -->
+      <div data-role="page" id="menu" data-hash="false">  <!-- id="main" <-> id="comiteSeleccionado" -->
+
+
+      </div><!-- /page -->
+    </div><!-- panel menu -->
+
+    <div data-role="panel" data-id="main">
+
+      <div data-role="page" id="publicaciones_historicas">
+        <div data-role="header">
+          <div class="logoUEB">
+            <img src="iconos/UEBlogo_rectangular.png" width="105" height="32" border="0">
+          </div>
+          <h1></h1>
+          <a href="#publicaciones_historicas" data-panel="main" data-role="button" data-icon="home" data-theme="c" class="ui-btn-right ui-icon-home" data-iconpos="notext">inicio</a>
+        </div><!-- /header -->
+        <div data-role="content" class="comite"> 
+          <div id="avatarLateral" >
+              <div class="comite-icono"><img src="iconos/icon_comunicaciones_circle.png" width="125" height="125" border="0"></div>
+          </div>
+          <ul data-role="listview" id="listaMenu" data-inset="true">
+            <li style="text-align: center; font-variant: small-caps;">Comit&eacute; de Comunicaciones</li>
+            <li>Integrantes:
+              <div class="comite-acercade">
+                -Rodrigo Gomez<br>
+                 Docente<br>
+                 Ejemplo@unbosque.edu.co<br>
+                -Luis Martinez<br>
+                 Docente<br>
+                 Ejemplo@unbosque.edu.co<br>
+                -Natalia Perez<br>
+                 Docente<br>
+                 Ejemplo@unbosque.edu.co
+                 </div>
+            </li>
+            <li>Funciones:
+              <div class="comite-acercade">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultricies diam arcu, eu aliquam enim semper eu. Nunc blandit ligula mi, in venenatis augue egestas at.
+                 </div>
+            </li>
+            <li>Contacto:
+              <div class="comite-acercade">Ejemplo@unbosque.edu.co</div>
+            </li>
+          </ul>
+        </div><!-- /content -->
+
+        <div data-role="footer" id="pie">
+          <div id="pie">
+            Vigilada Mineducación. Personería Jurídica otorgada mediante resolución 11153 del 4 de agosto de 1978.
+          </div>
+        </div><!-- /footer -->
+      </div><!-- /page -->
+
+      
+      <div data-role="page" id="comiteComunicaciones">
+        <div data-role="header">
+          <h1>Publicaciones</h1>
+        </div>
+
+        <div data-role="main" class="ui-content">
+            <div class="banner"><img src="iconos/Banner_Comunicaciones.png" width="450" height="70" border="0"></div>  
+            <div class="info">
+              <div class="info-titulo">Información General</div>
+              <div class="info-texto">La lectura es más fácil, también, en la nueva vista de lectura. Puede contraer partes del documento y centrarse en el texto que desee. Si necesita detener la lectura antes de llegar al final, Word le recordará dónde dejó la lectura, incluso en otros dispositivos. Los temas y estilos también ayudan a mantener su documento coordinado. Cuando haga clic en Diseño y seleccione un tema nuevo, cambiarán las imágenes, gráficos y gráficos SmartArt para que coincidan con el nuevo tema. Al aplicar los estilos, los títulos cambian para coincidir con el nuevo tema.
+              </div>
+            </div>
+            <div class="info">
+              <div class="comite-buscar"><input style="heigth: 20px; width: 300px; font-size: 12px;" maxlength="50" type="text" name="buscar" placeholder="Buscar..."></div>
+              <div class="comite-tags"></div>
+            </div>
+            <div class="public-destacado">
+              <div style="background-color: #AECC60;" class="public-encabezado">
+                <div class="public-titulo">
+                  T&iacute;tulo
+                </div>
+                <div class="public-fecha">Febrero 22 / 2017</div>
+        <!--      <a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-lock ui-btn-icon-notext"></a>
+        -->      </div>
+              <div class="public-contenido">
+                <div class="public-resumen">
+                Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia vestibulum...</div>
+                <div class="public-imagen"></div>
+                <div style="color: #A5E86F;" class="public-comite">Comunicaciones</div>
+              </div>
+            </div>
+        </div><!-- /content -->
+
+        <div data-role="footer" id="pie">
+          <div id="pie">
+            Vigilada Mineducación. Personería Jurídica otorgada mediante resolución 11153 del 4 de agosto de 1978.
+          </div>
+        </div><!-- /footer -->
+
+      </div> 
+
+    </div><!-- panel main -->
+    
+
+  </body>
+</html>

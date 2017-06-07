@@ -5,8 +5,8 @@ var ux_service = {
 	* Useful to fill a table or a list dynamically.
 	*
 	* @params htmlElement: The html template of the items to be created, keep in mind that the dynamic fields
-	* 							must have the same name of the field created to replace it with an '$' symbol at the
-	*							beginning.  i.e. <div> <h2> $nombre </h2> <p> $descripcion </p> </div>
+	* 							must have the same name of the field but with 'var.' at the beginning. 
+	*							i.e. <div> <h2> var.nombre </h2> <p> var.descripcion </p> </div>
 	*
 	* @params fields: 		A JSONArray fillied with all the name of the fields that are supposed to be replaced.
 	* 							i.e. [{field: "nombre"},{field: "descripcion"}]
@@ -27,11 +27,7 @@ var ux_service = {
 					htmlTemp = htmlElement;
 					for(var j=0;j<fields.length;j++){
 						currentField = fields[j]["field"];
-						// if((htmlTemp.match("/"+currentField+"/g") || []).length == 1){
-							htmlTemp = htmlTemp.replace("$"+currentField, data[i][currentField]);
-						// }else{
-							// console.log("matches: "+(htmlTemp.match("/"+currentField+"/g") || []).length);
-						// }
+							htmlTemp = htmlTemp.replace(new RegExp("var."+currentField,'g'), data[i][currentField]);
 					}
 					result += htmlTemp;
 				}

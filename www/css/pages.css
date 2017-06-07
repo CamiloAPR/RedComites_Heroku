@@ -2,7 +2,7 @@
 	margin-top: 0;
 }
 .logoUEB{
-	margin-left: 35px;
+	margin-left: 50px;
 	padding-top: 2px;
 	float: left;
 	width: 105px;
@@ -12,7 +12,8 @@
 	background: rgba(255, 255, 255, 0.68);
 	height:150px;
 	border-radius: 10px;
-	margin-bottom:-14px
+	margin-bottom:-14px;
+	text-align: center;
 }
 .panelGrid {
 	background-color: rgba(255, 255, 255, 0.45);
@@ -26,39 +27,55 @@
 	padding-right: 3px;
 	font-weight: bold;
 }
-.ui-content{
+.ui-page{
 	background-color: #0d7984;
 }
-
+hr {
+	border: 0;
+	color: #fff;
+	background-color: #fff;
+	height: 2px;
+}
 h6 {
 	font-size: 2vmin;
 	text-shadow: none;
 }
 .public-destacado {
-	float: left;
+	display: inline-block;
 	border-radius: 8px;
 	background-color: #FFFFFF;
-	width: 300px;
-	height: 140px;
-	margin-left: 20px;
+	width: 48%;
+	height: 300px;
+	margin-left: 1%;
 	margin-top: 10px;
 	margin-bottom: 10px;
+	margin-right: 5px;
+	min-width: 400px;
+}
+.public-fecha {
+	margin-top: 12px;
+	width: 100px;
+	height: 27px;
+	font-size: 11px;
+	text-align: right;
+	text-shadow: none;
+	color: #FFF;
+	font-style: italic;
+	display: inline;
 }
 .public-encabezado {
-	float: left;
 	border-radius: 8px 8px 0px 0px;
 	background-color: #FFAA00;
 	padding-left: 15px;
-	width: 285px;
 	height: 35px;
 }
 .public-titulo {
 	float: left;
-	text-align:left;
+	text-align: left;
 	text-shadow: none;
 	margin-top: 10px;
 	color: #FFF;
-	width: 150px;
+	width: 81%;
 	height: 20px;
 }
 .public-iconos {	
@@ -69,35 +86,41 @@ h6 {
 	height: 27px;
 }
 .public-resumen {
+	text-align: left;
 	float: left;
 	margin-top: 12px;
 	margin-left: 15px;
-	width: 180px;
-	height: 75px;
-	font-size: 14px;
+	width: 95%;
+	height: 79%;
+	font-size: 8px;
+	overflow: hidden;
 }
 .public-imagen {
-	float: left;
+	float: right;
 	margin-top: 12px;
-	margin-left: 30px;
+	margin-right: 5%;
 	width: 60px;
 	height: 60px;
 	border-style: solid;
 	border-color: green;
 	border-width: 1px;
 }
+.public-contenido {
+	height: 100%;
+}
 .public-comite {
 	font-size: 10px;
 	text-align: right;
 	text-shadow: none;
-	float: left;
+	float: right;
 	color: #FFAA00;
-	padding-right: 12px;
+	padding-right: 2%;
 	margin-top: 1px;
-	width: 285px;
 	height: 20px;
+	width: 240px;
 	font-style: italic;
 }
+
 p#nuevo{
 	font-size: 1.5em;
 		border-bottom: 1px solid #9C9E9E;
@@ -133,3 +156,74 @@ p#formulario{
 	font-weight: lighter;
 }
 
+.ui-panel-inner {
+	padding: 0;
+}
+
+.ui-dialog
+{
+    background-color: rgba(34,34,34,0.25) !important;
+}
+
+.ui-dialog.ui-overlay-a 
+{
+    background-image: none;
+}
+.headers {
+	background-color: #FFF;
+	border-bottom:solid #E8771D;
+	border-top: none;
+}
+.pie{
+	background-color: #FFF;
+	text-align: center;
+	padding-top: 7px;
+	padding-bottom: 7px; 
+	font-weight: lighter;
+	font-size: 11px;
+	border: none;
+}
+.tablist-left {
+    width: 35%;
+    display: inline-block;
+}
+.tablist-content {
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 5%;
+}
+.text {
+	font-size: 0.6em !important;
+}
+.title-menu {
+	font-weight:bold;
+	margin-top: 0 !important;
+}
+
+.search-bar {
+	margin: auto;
+	width: 85% !important;
+	background-color: #FFF;
+	border-radius: 7px;
+	padding-left: 10% !important;
+	padding-top: 3px;
+	margin-bottom: 10px;
+	margin-left: 2.5%;
+	padding-right: 3% !important;
+}
+
+#avatar-bg{
+	height:150px;
+	border-radius: 10px;
+	margin-bottom:-14px;
+	text-align: center;
+}
+
+.shareIcon{
+	width: 7vmin;
+	height: 7vmin;
+}
+.shareLink{
+	text-decoration: none;
+}

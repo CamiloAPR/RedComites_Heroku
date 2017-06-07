@@ -550,7 +550,7 @@
       $(window).bind('throttledresize', _orientationHandler);
 
       //popover button click handler - from http://www.cagintranet.com/archive/create-an-ipad-like-dropdown-popover/
-      $('.popover-btn').live('click', function(e){ 
+      $('.popover-btn').on('click', function(e){ 
         e.preventDefault(); 
         $('.panel-popover').fadeToggle('fast'); 
         if ($('.popover-btn').hasClass($.mobile.activeBtnClass)) { 
@@ -560,7 +560,7 @@
         } 
       });
 
-      $('body').live('click', function(event) { 
+      $('body').on('click', function(event) { 
         if (!$(event.target).closest('.panel-popover').length && !$(event.target).closest('.popover-btn').length) { 
             $(".panel-popover").stop(true, true).hide(); 
             $('.popover-btn').removeClass($.mobile.activeBtnClass); 
@@ -574,7 +574,7 @@
 
       // TODO:cleanup if all is ok
       // DONE: pageshow binding for scrollview - now using IScroll4! hell yeah!
-      // $('div:jqmData(role="page")').live('pagebeforeshow.scroll', function(event, ui){
+      // $('div:jqmData(role="page")').on('pagebeforeshow.scroll', function(event, ui){
       //   if ($.support.touch && !$.support.touchOverflow) {
 
       //     var $page = $(this),
@@ -595,7 +595,7 @@
 
       //data-hash 'crumbs' handler
       //now that data-backbtn is no longer defaulting to true, lets set crumbs to create itself even when backbtn is not available
-      $('div:jqmData(role="page")').live('pagebeforeshow.crumbs', function(event, data){
+      $('div:jqmData(role="page")').on('pagebeforeshow.crumbs', function(event, data){
         var $this = $(this);
         if($this.jqmData('hash') == 'crumbs' || $this.parents('div:jqmData(role="panel")').data('hash') == 'crumbs'){
           if($this.jqmData('hash')!=false && $this.find('.ui-crumbs').length < 1){
@@ -631,7 +631,7 @@
 
       //data-context handler - a page with a link that has a data-context attribute will load that page after this page loads
       //this still needs work - pageTransitionQueue messes everything up.
-      $('div:jqmData(role="panel")').live('pagechange.context', function(){
+      $('div:jqmData(role="panel")').on('pagechange.context', function(){
         var $this=$(this),
             $currPanelActivePage = $this.children('.' + $.mobile.activePageClass),
             panelContextSelector = $this.jqmData('context'),
@@ -654,7 +654,7 @@
       //TODO: cleanup if all is ok
       // this measures the height of header and footer and sets content to the appropriate height so 
       // that no content is concealed behind header and footer
-      // $('div:jqmData(role="page")').live('pageshow.contentHeight', function(){
+      // $('div:jqmData(role="page")').on('pageshow.contentHeight', function(){
       //   var $this=$(this),
       //       $header=$this.children(':jqmData(role="header")'),
       //       $footer=$this.children(':jqmData(role="footer")'),
@@ -664,7 +664,7 @@
       // })
 
       //this allows panels to change their widths upon changepage - useful for pages that need a different width than the ones provided. 
-      // $('div:jqmData(role="page")').live('')
+      // $('div:jqmData(role="page")').on('')
     }
     else {
       //removes all panels so the page behaves like a single panel jqm

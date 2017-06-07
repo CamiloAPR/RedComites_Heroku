@@ -1,0 +1,85 @@
+  <!DOCTYPE html> 
+  <html> 
+  	<head> 
+    	<title>RedComites</title> 
+      <meta charset="utf-8" />
+      <meta name="format-detection" content="telephone=no" />
+      <meta name="msapplication-tap-highlight" content="no" />
+      <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+    	<link rel="stylesheet" href="css/jquery.mobile-custom.css" />
+      <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+      <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+      <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+      <link rel="stylesheet" href="css/pages.css">
+      <link rel="stylesheet" href="css/estilosIndex.css">
+      <link rel="stylesheet" href="css/estilosIndexComites.css">
+      <script type="text/javascript" src="js/provider/db_service.js"></script>
+      <script type="text/javascript" src="js/provider/ux_service.js"></script>
+      <script type="text/javascript" src="js/indexComites.js"></script>
+    </head> 
+
+    <body> 
+      <!-- HEADER -->
+      <div class="headers" data-role="header">
+        <a href="#right-panel"  data-role="button" data-icon="home" data-theme="c" class="ui-btn-left ui-icon-home" data-iconpos="notext">Share</a>
+        <div class="logoUEB">
+          <img src="iconos/UEBlogo_rectangular.png" width="105" height="32" border="0">
+        </div>
+        <h1>Publicaciones</h1>
+        
+        <a href="#publicaciones_historicas" data-role="button" data-icon="home" data-theme="c" class="ui-btn-right ui-icon-home" data-iconpos="notext">inicio</a>
+      </div>
+
+      <!-- FOOTER -->
+      <div class="pie" data-role="footer" data-position="fixed">
+        Vigilada Mineducación. Personería Jurídica otorgada mediante resolución 11153 del 4 de agosto de 1978.
+      </div>
+
+      <!-- HOME PAGE -->
+      <div data-role="page" id="main">
+          <!-- MENU PANEL -->
+          <div data-role="panel" id="right-panel" data-display="overlay" data-position="left" style="margin: 0; background-color: #AECC60">
+              <div data-role="content"> 
+                  <div id="avatarLateral" >
+                      <img src="iconos/icon_comunicaciones_circle.png" width="125" height="125" border="0">
+                  </div>
+                    <ul id="listaMenu" data-role="listview" data-inset="true">
+                     
+                    </ul>
+              </div>
+          </div>
+          <!-- PAGE CONTENT -->
+          <div id="wrap" data-role="content">
+            <div id="banner" style="text-align:center;margin-bottom:15px;">
+              <img style="max-width: 100%" src="iconos/banner_comunicaciones_peq.png" border="0">
+            </div>
+                <div class="public-buscar">
+                  <a href="#newPublic" class="ui-btn ui-btn-icon-notext ui-btn-inline ui-btn-icon-right ui-icon-plus ui-btn-up-c ui-mini"></a>
+                </div>
+                <div class="wrap-public">
+              <div id="divPublicaciones" style="text-align:center"></div>
+            </div>
+          </div>
+      </div> 
+
+      <!-- NEW PUBLICATION PAGE -->
+      <div data-role="page" id="newPublic">
+          <!-- MENU PANEL -->
+          <div data-role="panel" id="right-panel" data-display="overlay" data-position="left" style="margin: 0; background-color: #AECC60">
+              <div data-role="content"> 
+                  <div id="avatarLateral" >
+                      <img src="iconos/icon_comunicaciones_circle.png" width="125" height="125" border="0">
+                  </div>
+                    <ul id="listaMenu2" data-role="listview" data-inset="true">
+                     
+                    </ul>
+              </div>
+          </div>
+          <!-- PAGE CONTENT -->
+          <div id="wrap" data-role="content">
+            <textarea name="textarea" class="editor"><b>My contents are from <u><span style="color:rgb(0, 148, 133);">TEXTAREA</span></u></b></textarea>
+          </div>
+      </div>
+
+    </body>
+  </html>

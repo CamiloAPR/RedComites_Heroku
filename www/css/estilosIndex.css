@@ -1,6 +1,3 @@
-.ui-content{
-	background-color: #0d7984;
-}
 .titulo{
 	text-align: center;
 	color: #FFF;
@@ -27,7 +24,7 @@
 	margin-left: 8px;
 	height: 40px;
 }
-.public-fecha {
+/*.public-fecha {
 	float: left;
 	margin-top: 12px;
 	margin-left: 22px;
@@ -38,7 +35,7 @@
 	text-shadow: none;
 	color: #FFF;
 	font-style: italic;
-}
+}*/
 .banner{
 	margin-top: 10px;
 	margin-left: 20px;
@@ -86,13 +83,28 @@
 .comite {
 	background-color: #AECC60;	
 }
-.tablist-left {
-    width: 25%;
-    display: inline-block;
+
+.ui-dialog-background {
+	opacity: 0.5;
+	display: block !important;
 }
-.tablist-content {
-    width: 75%;
-    display: inline-block;
-    vertical-align: top;
-    margin-left: 5%;
+
+.ui-dialog-background.pop.in {
+	opacity: 1;
+}
+
+.ui-dialog {
+	min-height: 100% !important;
+	background: transparent !important;
+}
+
+.formLabel{
+	text-align:left;
+	color: #FFF;
+}
+
+.committee {
+	padding-top: 0.2em !important;
+	padding-bottom: 0.2em;
+
 }
