@@ -44,7 +44,7 @@ $(document).on("pagecreate","#main",function(){
           }, 1000 )
         }
       }
-      db_service.s_post("login/", {email: email, password: password}, callback);
+      db_service.post("login/", {email: email, password: password}, callback);
       //   console.log("true")
       //   return true;
       // }else{
