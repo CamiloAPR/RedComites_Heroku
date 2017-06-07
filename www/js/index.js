@@ -17,28 +17,40 @@ $(document).on("pagecreate","#main",function(){
       var email = $('#email').val();
       var password = $('#password').val();
       var callback = function(data){
+
+        loggedUser = (data["role"] === undefined)?undefined:data;
+        
         if(data["role"] === 1){
-          $('#formLogin').attr('action', 'indexAdmin.html');
+          // $('#formLogin').attr('action', 'indexAdmin.html');
+          location.replace("./indexAdmin.html");
         }else if( data["role"] === 2){
-          $('#formLogin').attr('action', 'indexCommittee.html');
+          // $('#formLogin').attr('action', 'indexCommittee.html');
+          location.replace("./indexComites.html");
         }else{
           $("#errorMessage").text(unescape(decodeURIComponent(data["error"])));
           var content = $("#dialogContent");
           var originalColor = content.css("background-color");
+
           $("#errorMessage").animate({
           opacity: 0
           }, 1000 )
+
           $("#errorMessage").animate({
           opacity: 1
           }, 200 )
-         
+
+          $("#errorMessage").animate({
+          opacity: 0
+          }, 1000 )
         }
       }
-      if(db_service.s_post("login/", {email: email, password: password}, callback)){
-        return true;
-      }else{
-        return false;
-      }
+      db_service.s_post("login/", {email: email, password: password}, callback);
+      //   console.log("true")
+      //   return true;
+      // }else{
+      //   console.log("false")
+      //   return false;
+      // }
       
     });
 
@@ -75,14 +87,29 @@ $(document).on("pagebeforeshow","#committee",function(){
     $("#infoCommittee").text(data["general_info"]);
     $("#functionsCommittee").text(data["function"]);
     $("#membersCommittee").empty().append(miembros);
-    $("#emailCommittee").text(data["email"]);
-    
+    var email = "\'"+data["email"]+"\'";
+    var contact = '<a href="#" onclick="sendMail('+email+')" target="_blank">'+
+                      '<img src="https://simplesharebuttons.com/images/somacro/email.png" alt="Enviar un correo" style="width: 2em;height: 2em;"></a>';
+    $("#emailCommittee").empty().append("<p>"+data["email"]+"</p>").append(contact);
+
+    var publicationsTemplate = '<div class="public-destacado">'+
+      '<a href="#" onclick="showPublication(var.id)" style="text-decoration: none;"><div style="background-color: '+data["color"]+'" class="public-encabezado">'+
+        '<div class="public-titulo">var.title </div>'+
+        '<div class="public-fecha">var.publication_date</div></div></a>'+
+      '<div class="public-contenido">'+
+        '<div class="public-resumen">var.content</div>'+
+        // '<div class="public-imagen"></div>'+
+      '</div></div>';
+  
+  var dataPublicationsTemplate = [{field: "id"},{field: "title"},{field: "color"}, {field: "content"},{field: "publication_date"}]
+  ux_service.createHTMLComponents(publicationsTemplate, dataPublicationsTemplate, $("#committeePublications"), data["publications"]);
+  console.log(data["publications"]);
   }
+
   if(urlParam("committee") !== undefined){
     db_service.get("committee/committee_id/"+urlParam("committee"), callback);
   }
-  // loadCommittees();
-  // loadPublications();
+  
 });
 $(document).on("pagebeforeshow","#viewPublication",function(){
   if(mainPublications === undefined){
@@ -113,19 +140,6 @@ function loadCommittees(){
           '</div>'+
        ' </a>'+
       '</li>'
-    // var data = [ 
-    //   {name:"Responsabilidad Social", color:"#FF7D1F", page:"#", icon:"iconos/icon_rsu_circle.png"},
-    //   {name:"Egresados", color:"#4C6BA2", page:"#", icon:"iconos/icon_egresados_circle.png"},
-    //   {name:"Calidad", color:"#E52B33", page:"#", icon:"iconos/icon_calidad_circle.png"},
-    //   {name:"Educación Continuada", color:"#20B07F", page:"#", icon:"iconos/icon_continuada_circle.png"},
-    //   {name:"Curricular", color:"#F15A4B", page:"#", icon:"iconos/icon_curricular_circle.png"},
-    //   {name:"Comunicaciones", color:"#AECC60", page:"#", icon:"iconos/icon_comunicaciones_circle.png"},
-    //   {name:"Investigaciones", color:"#C12E86", page:"#", icon:"iconos/icon_investigacion_circle.png"},
-    //   {name:"Externo", color:"#619543", page:"#", icon:"iconos/icon_externo_circle.png"},
-    //   {name:"Éxito Estudiantil", color:"#662D91", page:"#", icon:"iconos/icon_exito_circle.png"},
-    //   {name:"Internacionalización", color:"#42BDED", page:"#", icon:"iconos/icon_internacionalizacion_circle.png"},
-    //   {name:"TIC", color:"#F9B924", page:"#", icon:"iconos/icon_tic_circle.png"}
-    // ];
     var dataTemplateCommittees = [{field: "id"}, {field: "color"}, {field: "name"},{field: "page"},{field: "icon"}]
     callback = function(data){
       return ux_service.createHTMLComponents(templateCommittees, dataTemplateCommittees, $("#listCommittees"), data);
@@ -150,7 +164,6 @@ function loadPublications(){
     return ux_service.createHTMLComponents(publicationsTemplate, dataPublicationsTemplate, $("#divPublications"), data);
   }
   db_service.get("publication", callback);
- 
 }
 function showCommittee(id_committee){
     $.mobile.changePage('#committee', {
@@ -178,7 +191,7 @@ function showPublicationInfo(selectedPublication){
     });
     $("#titlePublication").text(selectedPublication["title"]);
     $("#bodyPublication").css("background-color",selectedPublication["color"]);
-    var header = '<p style="text-align:left"><i>Fecha de publicación: '+selectedPublication["publication_date"]+'</i></p><p style="text-align:left"><b>'+selectedPublication["name"]+'</b></p>'; 
+    var header = '<p style="text-align:right"> <b>'+selectedPublication["name"]+'</b> > <i>'+selectedPublication["publication_date"]+' </i> </p>'; 
     $("#contentPublication").empty().append(header).append(selectedPublication["content"]);
   }else{
     alert("La publicación no existe");
@@ -186,10 +199,26 @@ function showPublicationInfo(selectedPublication){
 }
 
 function shareLink(url){
-  url = url + window.location.href;
-  window.open(url, '_blank');
+  // url = url + encodeURIComponent(window.location);
+  var link="http://redcomites.herokuapp.com/index.html"+window.location.hash;
+  window.open(url+encodeURIComponent(link), '_blank');
 }
 
+function sendMail(to){
+  // if(isMobile()){
+  //   window.open("googlegmail://co?to="+to,"_blank");
+  // }else{
+    window.open("https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to="+to, "_blank");
+  // }
+}
+
+function isMobile(){
+  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    return true;
+  }else{
+    return false;
+  }
+}
 var urlParam = function(name){
     var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
     return results[1] || 0;

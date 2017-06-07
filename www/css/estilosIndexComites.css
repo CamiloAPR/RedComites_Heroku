@@ -2,27 +2,6 @@
 	min-width: 300px !important;
 	max-width: 700px !important;
 }
-.public-buscar {
-	margin: auto;
-	width: 85% !important;
-	background-color: #FFF;
-	border-radius: 7px;
-	padding-left: 10% !important;
-	padding-top: 3px;
-	margin-bottom: 10px;
-	margin-left: 2.5%;
-	padding-right: 3% !important;
-}
-.wrap-public {
-	margin: auto;
-	width: 90% !important;
-	background: rgba(0, 0, 0, 0.30);
-	border-radius: 10px;
-	padding-left: 5% !important;
-	padding-top: 15px;
-	margin-left: 2.5%;
-	padding-right: 3% !important;
-}
 .public-destacado {
 	width: 100% !important;
 }
@@ -45,4 +24,13 @@
 }
 .public-comite {
 	padding-top: 1% !important;
+}
+.width-form {
+	width: 80%;
+}
+thead, tbody {
+	background-color: #FFF;
+}
+.registers{
+	border-bottom: 1px solid #d6d6d6;
 }

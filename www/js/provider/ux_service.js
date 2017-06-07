@@ -1,4 +1,4 @@
-
+var loggedUser;
 var ux_service = {
 	/*
 	* This function is used to create html components dynamically using the data returned from a REST service. Its

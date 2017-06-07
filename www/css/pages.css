@@ -16,8 +16,11 @@
 	text-align: center;
 }
 .panelGrid {
+	border-radius: 10px;
 	background-color: rgba(255, 255, 255, 0.45);
 	padding: 5px;
+	text-align: center;
+	margin-bottom: 15px;
 }
 .itemGrid {
 	text-align: center;
@@ -49,8 +52,8 @@ h6 {
 	margin-left: 1%;
 	margin-top: 10px;
 	margin-bottom: 10px;
-	margin-right: 5px;
-	min-width: 400px;
+	margin-right: 2px;
+	margin-left: 2px;
 }
 .public-fecha {
 	margin-top: 12px;
@@ -90,6 +93,7 @@ h6 {
 	float: left;
 	margin-top: 12px;
 	margin-left: 15px;
+	margin-right: 15px;
 	width: 95%;
 	height: 79%;
 	font-size: 8px;
@@ -188,10 +192,18 @@ p#formulario{
     display: inline-block;
 }
 .tablist-content {
-    width: 50%;
+    width: 64%;
+    text-align: center;
     display: inline-block;
     vertical-align: top;
-    margin-left: 5%;
+}
+
+.formText {
+	font-variant: small-caps;
+	text-shadow: none;
+	font-weight: bold;
+	font-size: 1.3vw;
+	margin: 4px;
 }
 .text {
 	font-size: 0.6em !important;
@@ -226,4 +238,25 @@ p#formulario{
 }
 .shareLink{
 	text-decoration: none;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="public-destacado"] {
+        width: 100%;
+    }
+    [class*="public-destacado"] {
+        width: 100%;
+    }
+    [class*="tablist-left"] {
+        width: 100%;
+    }
+    [class*="tablist-content"] {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+
 }

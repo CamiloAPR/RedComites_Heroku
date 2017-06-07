@@ -16,6 +16,7 @@
       <script type="text/javascript" src="js/provider/db_service.js"></script>
       <script type="text/javascript" src="js/provider/ux_service.js"></script>
       <script type="text/javascript" src="js/indexComites.js"></script>
+
     </head> 
 
     <body> 
@@ -43,7 +44,7 @@
                   <div id="avatarLateral" >
                       <img src="iconos/icon_comunicaciones_circle.png" width="125" height="125" border="0">
                   </div>
-                    <ul id="listaMenu" data-role="listview" data-inset="true">
+                    <ul class="listaMenu" data-role="listview" data-inset="true">
                      
                     </ul>
               </div>
@@ -53,10 +54,10 @@
             <div id="banner" style="text-align:center;margin-bottom:15px;">
               <img style="max-width: 100%" src="iconos/banner_comunicaciones_peq.png" border="0">
             </div>
-                <div class="public-buscar">
-                  <a href="#newPublic" class="ui-btn ui-btn-icon-notext ui-btn-inline ui-btn-icon-right ui-icon-plus ui-btn-up-c ui-mini"></a>
-                </div>
-                <div class="wrap-public">
+            <div style="background-color:#FFF" class="panelGrid">
+              <a href="#newPublic" class="ui-btn ui-btn-inline ui-btn-icon-right ui-icon-plus ui-btn-up-c ui-mini">Nueva Publicaci&oacute;n</a>
+            </div>
+            <div style="background: rgba(0, 0, 0, 0.30);" class="panelGrid">
               <div id="divPublicaciones" style="text-align:center"></div>
             </div>
           </div>
@@ -70,16 +71,83 @@
                   <div id="avatarLateral" >
                       <img src="iconos/icon_comunicaciones_circle.png" width="125" height="125" border="0">
                   </div>
-                    <ul id="listaMenu2" data-role="listview" data-inset="true">
+                    <ul class="listaMenu" data-role="listview" data-inset="true">
                      
                     </ul>
               </div>
           </div>
           <!-- PAGE CONTENT -->
           <div id="wrap" data-role="content">
-            <textarea name="textarea" class="editor"><b>My contents are from <u><span style="color:rgb(0, 148, 133);">TEXTAREA</span></u></b></textarea>
+            <div id="banner" style="text-align:center;margin-bottom:15px;">
+              <img style="max-width: 100%" src="iconos/banner_comunicaciones_peq.png" border="0">
+            </div>
+
+            <div class="panelGrid">
+              <center>
+              <div style="width: 80%;" class="ui-grid-solo ui-responsive">
+                      <p class="formText">T&iacute;tulo</p>
+              </div>
+              <div style="width: 60%;" class="ui-grid-solo ui-responsive">
+                      <input type="text" name="title" placeholder="Ingresa el t&iacute;tulo de la publicaci&oacute;n">
+              </div>
+              <div style="width: 80%;" class="ui-grid-solo ui-responsive">
+                      <p class="formText">Contenido</p>
+              </div>
+              <div style="width: 80%;" class="ui-grid-solo ui-responsive">
+                <!-- acá va el rich editor -->
+                <textarea name="textarea" class="editor"><b>My contents are from <u><span style="color:rgb(0, 148, 133);">TEXTAREA</span></u></b></textarea>
+              </div>
+              </center>
+             
+              <table align="center">
+                      <tr>
+                        <td><a href="#main" class="ui-btn ui-btn-inline ui-btn-up-c ui-mini">Cancelar</a></td>
+                        <td><a href="#" class="ui-btn ui-btn-inline ui-btn-up-c ui-mini">Guardar</a></td>
+                      </tr>
+              </table>
+            </div>
           </div>
       </div>
 
+      <!-- PROFILE PAGE -->
+      <div data-role="page" id="profile">
+          <!-- MENU PANEL -->
+          <div data-role="panel" id="right-panel" data-display="overlay" data-position="left" style="margin: 0; background-color: #AECC60">
+              <div data-role="content"> 
+                  <div id="avatarLateral" >
+                      <img src="iconos/icon_comunicaciones_circle.png" width="125" height="125" border="0">
+                  </div>
+                    <ul class="listaMenu" data-role="listview" data-inset="true">
+                     
+                    </ul>
+              </div>
+          </div>
+          <!-- PAGE CONTENT -->
+          <div id="wrap" data-role="content">
+            <div id="banner" style="text-align:center;margin-bottom:15px;">
+              <img style="max-width: 100%" src="iconos/banner_comunicaciones_peq.png" border="0">
+            </div>
+
+            <div class="panelGrid profileForm">
+              
+            </div>
+            <div data-role="popup" id="popupMember" data-theme="c" class="ui-corner-all">
+                <form>
+                    <div style="padding:10px 20px;">
+                        <h3>Nuevo Integrante</h3>
+                        <label class="ui-hidden-accessible">Nombre:</label>
+                        <input name="memberName" value="" placeholder="nombre" type="text">
+                        <label class="ui-hidden-accessible">Correo:</label>
+                        <input name="memberEmail" value="" placeholder="correo" type="email">
+                        <label class="ui-hidden-accessible">Funci&oacute;n:</label>
+                        <input name="memberEmail" value="" placeholder="correo" type="email">
+                        <button type="submit" class="ui-btn ui-corner-all ui-shadow ui-btn-icon-left ui-icon-check">Guardar</button>
+                    </div>
+                </form>
+            </div>
+          </div>
+        </div>
+      </div>
+        
     </body>
   </html>
