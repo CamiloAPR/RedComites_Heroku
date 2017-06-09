@@ -3,6 +3,7 @@
   	<head> 
     	<title>RedComites</title> 
       <meta charset="utf-8" />
+
       <meta name="format-detection" content="telephone=no" />
       <meta name="msapplication-tap-highlight" content="no" />
       <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
@@ -16,6 +17,12 @@
       <script type="text/javascript" src="js/provider/db_service.js"></script>
       <script type="text/javascript" src="js/provider/ux_service.js"></script>
       <script type="text/javascript" src="js/indexComites.js"></script>
+
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="js/editor.js"></script>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+      <link href="css/editor.css" type="text/css" rel="stylesheet"/>
 
     </head> 
 
@@ -88,21 +95,21 @@
                       <p class="formText">T&iacute;tulo</p>
               </div>
               <div style="width: 60%;" class="ui-grid-solo ui-responsive">
-                      <input type="text" name="title" placeholder="Ingresa el t&iacute;tulo de la publicaci&oacute;n">
+                      <input type="text" id="publication-title" placeholder="Ingresa el t&iacute;tulo de la publicaci&oacute;n">
               </div>
               <div style="width: 80%;" class="ui-grid-solo ui-responsive">
                       <p class="formText">Contenido</p>
               </div>
               <div style="width: 80%;" class="ui-grid-solo ui-responsive">
                 <!-- acá va el rich editor -->
-                <textarea name="textarea" class="editor"><b>My contents are from <u><span style="color:rgb(0, 148, 133);">TEXTAREA</span></u></b></textarea>
+                <textarea id="txtEditor"></textarea> 
               </div>
               </center>
              
               <table align="center">
                       <tr>
                         <td><a href="#main" class="ui-btn ui-btn-inline ui-btn-up-c ui-mini">Cancelar</a></td>
-                        <td><a href="#" class="ui-btn ui-btn-inline ui-btn-up-c ui-mini">Guardar</a></td>
+                        <td><a href="#" onclick="savePublication()" class="ui-btn ui-btn-inline ui-btn-up-c ui-mini">Guardar</a></td>
                       </tr>
               </table>
             </div>

@@ -44,7 +44,10 @@ $(document).on("pagecreate","#main",function(){
           }, 1000 )
         }
       }
-      db_service.post("login/", {email: email, password: password}, callback);
+      db_service.p_get("login/", {email: email, password: password}, callback);
+
+
+      return false;
       //   console.log("true")
       //   return true;
       // }else{
@@ -100,11 +103,11 @@ $(document).on("pagebeforeshow","#committee",function(){
         '<div class="public-resumen">var.content</div>'+
         // '<div class="public-imagen"></div>'+
       '</div></div>';
+
   
   var dataPublicationsTemplate = [{field: "id"},{field: "title"},{field: "color"}, {field: "content"},{field: "publication_date"}]
   ux_service.createHTMLComponents(publicationsTemplate, dataPublicationsTemplate, $("#committeePublications"), data["publications"]);
   console.log(data["publications"]);
-  }
 
   if(urlParam("committee") !== undefined){
     db_service.get("committee/committee_id/"+urlParam("committee"), callback);

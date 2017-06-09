@@ -25,6 +25,28 @@ var db_service = {
             }
         });
     }
+    , p_get: function (url, data, callback){
+        $.ajax({
+            url: host+url,
+            type: 'GET',
+            headers: {
+                    'Access-Control-Allow-Origin': '*'
+                },
+            crossDomain: true,
+            data: data,
+
+            success: function(data, textStatus, jqXHR){
+                callback(data);
+            },
+            error: function(jqXHR, textStatus, errorThrown) {
+                console.log('error, ubicación: '+url);
+                console.log(jqXHR.responseText);
+                console.log(errorThrown);
+                console.log(textStatus);
+                // alert(jqXHR.responseText);
+            }
+        });
+    }
 
     /*
     * This function is used to insert data in a REST Service.
